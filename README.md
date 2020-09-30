@@ -1,3 +1,12 @@
+In this repository, we provide a through study and use case for using tello drone.
+
+Tello is a low cost drone with sdk capability. It is controlled by 2.4G wifi and can be used in swarm formation. Below are some typical use case of tello. 
+
+
+
+
+
+
 # Tello_ROS_ORBSLAM
 In this project we provide a full and whole framework for using Drones in general, and the DJI Tello specifficaly.
 
