@@ -1,8 +1,15 @@
+
+#Tello_formation_and_visual_control
+
 In this repository, we provide a through study and use case for using tello drone.
 
-Tello is a low cost drone with sdk capability. It is controlled by 2.4G wifi and can be used in swarm formation. Below are some typical use case of tello. 
+Tello is a low cost drone with sdk capability. It is controlled by 2.4G wifi and can be used in swarm formation. The only limitation is that the drone is streaming video and controlled by the same ip address 192.168.10.1. When using multiple drone together, it is slightly more complicated to config
 
+There are two different control mode. One is typical AP mode where drone function like a access point and all device can connect to it. The other mode is station mode which all drone connects to the same router. 
 
+Below are some typical use case of tello. 
+
+![Image of Tello UI](https://github.com/snakehaihai/Tello_formation_and_visual_control/blob/master/Images/tello_use_case_part_I.png)
 
 
 
