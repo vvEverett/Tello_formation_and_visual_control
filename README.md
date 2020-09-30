@@ -17,6 +17,29 @@ Below are some typical use case of tello.
 ![Image of Tello UI](https://github.com/snakehaihai/Tello_formation_and_visual_control/blob/master/Images/tello_use_case_part_II.png)
 
 
+# Mode 1: App based control ( System verfication and activation ) 
+
+This is what the tello suppose to do. Run this first if you have a brand new tello or you cant control the tello by its sdk.  If you encounter any problem, make sure in this mode you can control it. If in this mode, you still can not control, then likely you had a hardware issue. 
+
+1. Turn on the tello and wait for the light to turn flashing yellow  
+
+2. Turn on the cellphone wifi and connect to the IP with the name Tello_XXXXXX  where XXXXXX is the tello ID  ( if can not see, w8 for a while or press the power button for more then 5 sec and wait for light to goes off  for a system reset from station mode)
+
+3. After you connect to the drone, turn on the tello app which is available in the app market. For the first time user, you will be asked to activate the drone which is standard process for all dji drones. 
+
+4. After activation, you are free to fly and navigate. 
+
+If you can fly by this stage, then you are good to go to the next step.
+
+
+# Mode 2: Script based control ( SDK testing )
+
+
+
+
+
+
+
 # Tello_ROS_ORBSLAM
 In this project we provide a full and whole framework for using Drones in general, and the DJI Tello specifficaly.
 
