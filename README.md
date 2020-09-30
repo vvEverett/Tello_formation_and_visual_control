@@ -1,6 +1,8 @@
 
 # Tello_formation_and_visual_control
 
+By Dr. Yuan Shenghai       syuan003@e.ntu.edu.sg   yuanshenghai@outlook.com
+
 In this repository, we provide a through study and use case for using tello drone.
 
 Tello is a low cost drone with sdk capability. It is controlled by 2.4G wifi and can be used in swarm formation. The only limitation is that the drone is streaming video and controlled by the same ip address 192.168.10.1. When using multiple drone together, it is slightly more complicated to configurate and there is no complete tutorial in teaching how to config. 
@@ -36,7 +38,7 @@ If you can fly by this stage, then you are good to go to the next step.
 
 The purpose of this mode is to make sure that the tello sdk works on your PC. 
 
-We only verified this in Ubuntu 18.04.05 in both hardware notebook and virtual machine. For other machine, it is possible to run it. but can not garuntee that it will work. 
+We only verified this in Ubuntu 18.04.05 in both hardware notebook and virtual machine. For other machine, it is possible to run it. but can not garuntee that it will work. Most of the command you can find from https://github.com/tau-adl/Tello_ROS_ORBSLAM. I added a few key step which stoped many people from getting it running.
 
 
 
