@@ -118,7 +118,7 @@ sudo cp ~/ROS/h264decoder/libh264decoder.so /usr/local/lib/python2.7/dist-packag
 cd ~
 mkdir ROS
 cd ROS
-git clone https://github.com/tau-adl/Tello_ROS_ORBSLAM.git
+git clone https://github.com/snakehaihai/Tello_formation_and_visual_control
 ```
 ## Installing our version of TelloPy
 based on https://github.com/dji-sdk/Tello-Python and https://github.com/hanyazou/TelloPy
