@@ -28,8 +28,8 @@ H264Decoder::H264Decoder()
   if (!context)
     throw H264InitFailure("cannot allocate context");
 
-  if(codec->capabilities & CODEC_CAP_TRUNCATED) {
-    context->flags |= CODEC_FLAG_TRUNCATED;
+  if(codec->capabilities & AV_CODEC_CAP_TRUNCATED) {
+    context->flags |= AV_CODEC_FLAG_TRUNCATED;
   }  
 
   int err = avcodec_open2(context, codec, nullptr);

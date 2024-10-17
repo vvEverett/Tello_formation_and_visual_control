@@ -1637,3 +1637,4 @@
 /ROS/ccmslam_ws/src/kitti_player/
 /ROS/ccmslam_ws/src/flock/.git/
 /ROS/tello_catkin_ws/camera_calibaration_data/Tello/calibrationdata_*
+h264decoder/build/
