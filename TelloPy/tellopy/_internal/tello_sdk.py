@@ -740,12 +740,12 @@ class TelloSDK:
         """
         height = self.send_command('height?')
         height = str(height)
-        height = filter(str.isdigit, height)
+        height = list(filter(str.isdigit, height))
         try:
             height = int(height)
             self.last_height = height
         except Exception as e:
-            print e, "received height = {}".format(height)
+            print(e, "received height = {}".format(height))
             height = self.last_height
             pass
         return height
@@ -763,7 +763,7 @@ class TelloSDK:
         try:
             battery = int(battery)
         except Exception as e:
-            print e, "received battery = {}".format(battery)
+            print(e, "received battery = {}".format(battery))
             pass
 
         return battery
@@ -781,7 +781,7 @@ class TelloSDK:
         try:
             flight_time = int(flight_time)
         except Exception as e:
-            print e, "received flight_time = {}".format(flight_time)
+            print(e, "received flight_time = {}".format(flight_time))
             pass
 
         return flight_time
@@ -912,7 +912,7 @@ class TelloSDK:
             else:
                 speed = round((speed / 27.7778), 1)
         except Exception as e:
-            print e, "speed received = {}".format(speed)
+            print(e, "speed received = {}".format(speed))
             pass
 
         return speed

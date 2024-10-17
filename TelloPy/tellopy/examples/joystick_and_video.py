@@ -230,7 +230,7 @@ def handler(event, sender, data, **args):
     elif event is drone.EVENT_LOG_DATA:
         log_data = data
     else:
-        print('event="%s" data=%s' % (event.getname(), str(data)))
+        print(('event="%s" data=%s' % (event.getname(), str(data))))
 
 
 def update(old, new, max_delta=0.3):
@@ -384,7 +384,7 @@ def main():
         js = pygame.joystick.Joystick(0)
         js.init()
         js_name = js.get_name()
-        print('Joystick name: ' + js_name)
+        print(('Joystick name: ' + js_name))
         if js_name in ('Wireless Controller', 'Sony Computer Entertainment Wireless Controller'):
             buttons = JoystickPS4
         elif js_name == 'Sony Interactive Entertainment Wireless Controller':

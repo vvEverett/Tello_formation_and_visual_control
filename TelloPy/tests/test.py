@@ -18,11 +18,11 @@ def handler(event, sender, data, **args):
             print(data)
             prev_flight_data = str(data)
     elif event is drone.EVENT_TIME:
-        print('event="%s" data=%d' % (event.getname(), data[0] + data[1] << 8))
+        print(('event="%s" data=%d' % (event.getname(), data[0] + data[1] << 8)))
     elif event is drone.EVENT_VIDEO_FRAME:
         pass
     else:
-        print('event="%s" data=%s' % (event.getname(), str(data)))
+        print(('event="%s" data=%s' % (event.getname(), str(data))))
 
 
 def test():

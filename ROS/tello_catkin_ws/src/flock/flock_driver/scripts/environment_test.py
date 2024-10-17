@@ -4,7 +4,7 @@ import av
 import cv2
 import numpy
 import tellopy
-import libh264decoder
+import h264decoder
 
 
 # Test the environment: TelloPy + PyAV + NumPy + OpenCV + all connections
@@ -23,7 +23,7 @@ def main():
 
         # Get video stream
         # container = av.open(drone.get_video_stream())
-        container = av.open(drone.get_video_stream())
+        container = av.open(drone.get_video_stream(), format='h264')
 
 
 

@@ -38,12 +38,12 @@ def send(sig, **named):
 if __name__ == '__main__':
     def handler0(event, sender, **args):
         recvs.append(0)
-        print('handler0: event=%s sender=%s' % (str(event), str(sender)))
+        print(('handler0: event=%s sender=%s' % (str(event), str(sender))))
         print(args)
 
     def handler1(event, sender, **args):
         recvs.append(1)
-        print('handler1: event=%s sender=%s' % (str(event), str(sender)))
+        print(('handler1: event=%s sender=%s' % (str(event), str(sender))))
         print(args)
 
     test_signal0 = event.Event('test signal0')

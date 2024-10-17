@@ -546,7 +546,7 @@ class Tello(object):
         if data[0] != START_OF_PACKET:
             log.info('start of packet != %02x (%02x) (ignored)' % (START_OF_PACKET, data[0]))
             log.info('    %s' % byte_to_hexstring(data))
-            log.info('    %s' % str(map(chr, data))[1:-1])
+            log.info('    %s' % str(list(map(chr, data)))[1:-1])
             return False
 
         pkt = Packet(data)
@@ -913,10 +913,10 @@ class Tello(object):
                     prev_ts = history[0][0]
                     for i in range(1, len(history)):
                         [ ts, sz, sn ] = history[i]
-                        print('    %02d:%02d:%02d.%03d %4d bytes %04x +%03d%s' %
+                        print(('    %02d:%02d:%02d.%03d %4d bytes %04x +%03d%s' %
                               (ts.hour, ts.minute, ts.second, ts.microsecond/1000,
                                sz, sn, (ts - prev_ts).total_seconds()*1000,
-                               (' *' if i == len(history) - 1 else '')))
+                               (' *' if i == len(history) - 1 else ''))))
                         prev_ts = ts
                     history = history[-1:]
 

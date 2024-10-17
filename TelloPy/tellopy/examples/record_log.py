@@ -21,7 +21,7 @@ def handler(event, sender, data, **args):
             write_header = False
         file.write('%s\n' % data.format_cvs())
     if event is drone.EVENT_FLIGHT_DATA or event is drone.EVENT_LOG_DATA:
-        print('record_log: %s: %s' % (event.name, str(data)))
+        print(('record_log: %s: %s' % (event.name, str(data))))
 
 def test():
     drone = tellopy.Tello()
