@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/env python3
 # Copyright (c) 2015, Rethink Robotics, Inc.
 
 # Using this CvBridge Tutorial for converting
@@ -75,7 +75,7 @@ class RosImageSaver(object):
             try:
                 # Convert your ROS Image message to OpenCV2
                 cv2_img = self.bridge.imgmsg_to_cv2(msg, "bgr8")
-            except CvBridgeError, e:
+            except CvBridgeError as e:
                 print(e)
             else:
                 # Save your OpenCV2 image as a jpeg 
@@ -90,7 +90,7 @@ class RosImageSaver(object):
                 # out_path = os.path.join(self.picture_dir, final_str)
                 out_path = final_str
                 out_path += '.jpeg'
-                print("Taking picture to {}".format(out_path))
+                print(("Taking picture to {}".format(out_path)))
                 cv2.imwrite(out_path, cv2_img)
 
     def take_picure_callback(self, msg):

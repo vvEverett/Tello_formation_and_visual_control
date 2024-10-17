@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 import rospy
 from sensor_msgs.msg import Joy
@@ -102,7 +101,7 @@ class FlockBase(object):
             return False
         twist_field, twist_sign = trim_targets[key]
         twist_value = twist_sign * self.trim_speed
-        print(key, trim_targets[key])
+        print((key, trim_targets[key]))
         if twist_field == 0:
             twist.linear.x = twist_value
         elif twist_field == 1:

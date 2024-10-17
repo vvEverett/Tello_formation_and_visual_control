@@ -1638,3 +1638,5 @@
 /ROS/ccmslam_ws/src/flock/.git/
 /ROS/tello_catkin_ws/camera_calibaration_data/Tello/calibrationdata_*
 h264decoder/build/
+ROS/tello_catkin_ws/src/CMakeLists.txt
+ROS/tello_catkin_ws/.catkin_workspace

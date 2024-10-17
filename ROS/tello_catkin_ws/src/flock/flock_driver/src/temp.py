@@ -160,10 +160,10 @@ if __name__ == '__main__':
         while abs(sim.real_world.x-sim.command_pos.x) > 0.08 or abs(sim.real_world.y-sim.command_pos.y) > 0.08:
             # raw_input('.')
             sim.calculate_speed()
-            print('delta={},{} alpha={}'.format(sim.pos_error.x, sim.pos_error.y, sim.orientation_alpha))
-            print('pitch={} roll={}'.format(sim.speed.x, sim.speed.y))
+            print(('delta={},{} alpha={}'.format(sim.pos_error.x, sim.pos_error.y, sim.orientation_alpha)))
+            print(('pitch={} roll={}'.format(sim.speed.x, sim.speed.y)))
             sim.calculate_real_world()
-            print('real world = {},{} command_pos= {},{}'.format(sim.real_world.x, sim.real_world.y, sim.command_pos.x, sim.command_pos.y))
+            print(('real world = {},{} command_pos= {},{}'.format(sim.real_world.x, sim.real_world.y, sim.command_pos.x, sim.command_pos.y)))
 
             plt.scatter([sim.real_world.x], [sim.real_world.y], s=10, marker='o', c='b')
             plt.scatter([sim.command_pos.x], [sim.command_pos.y], s=60, marker='o', c='k')

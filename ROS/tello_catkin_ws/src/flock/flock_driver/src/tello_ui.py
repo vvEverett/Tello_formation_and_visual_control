@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import rospy
-import Tkinter as tki
-import tkFileDialog
-from Tkinter import Toplevel, Scale
+import tkinter as tki
+import tkinter.filedialog
+from tkinter import Toplevel, Scale
 import threading
 import os
 import time
@@ -1227,7 +1227,7 @@ class TelloUI(object):
             self.toogle_merge_coordinates_btn.configure(fg='red', bg='black')
         else:
             self.toogle_merge_coordinates_btn.configure(bg='yellow', fg='black')
-        print("toggle_merge_coordinates_publish", self.use_merge_coordinates)
+        print(("toggle_merge_coordinates_publish", self.use_merge_coordinates))
 
     def trajectory_publish_callback(self):
         self.update_trajectory_list_from_gui()
@@ -1255,11 +1255,11 @@ class TelloUI(object):
         self.take_picure_publisher.publish()
 
     def trajectory_load_callback(self):
-        trajectory_path = tkFileDialog.askopenfilename(initialdir = "~/ROS/ccmslam_ws/src/flock/flock_driver/src/",title = "Select Trajectory file",filetypes = (("csv files","*.csv"),("all files","*.*")))    
+        trajectory_path = tkinter.filedialog.askopenfilename(initialdir = "~/ROS/ccmslam_ws/src/flock/flock_driver/src/",title = "Select Trajectory file",filetypes = (("csv files","*.csv"),("all files","*.*")))    
         if trajectory_path == '':
             return
         self.trajectory_list = self.load_trajectory_from_csv(trajectory_path)
-        print("trajectory_list={}".format(self.trajectory_list))
+        print(("trajectory_list={}".format(self.trajectory_list)))
         self.update_gui_trajectory()
 
     def trajectory_kill_callback(self):
@@ -1419,7 +1419,7 @@ class TelloUI(object):
         self.angle_radian = math.atan(tan_angle)
         self.angle = self.angle_radian*180/math.pi
         self.angle_calc_strigvar_angle.set('%.4f'%(self.angle))  
-        print("x={} z={} z/x={} angle={}".format(x, z, tan_angle, self.angle))
+        print(("x={} z={} z/x={} angle={}".format(x, z, tan_angle, self.angle)))
 
     def orientation_callback(self, orientation_point):
         self.orientation_degree = orientation_point

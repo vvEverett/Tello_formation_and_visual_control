@@ -42,7 +42,7 @@ def parse_args():
     return parser.parse_args()
 
 (options, args) = parse_args()
-print(options, args)
+print((options, args))
 
 
 def recv():
@@ -54,17 +54,17 @@ def recv():
     sock_dst.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
     if not options.src_network_card == None:
-        print('Using {} for source socket'.format(options.src_network_card))
+        print(('Using {} for source socket'.format(options.src_network_card)))
         sock_src.setsockopt(socket.SOL_SOCKET, 25, options.src_network_card)
 
     if not options.dst_network_card == None:
-        print('Using {} for dest socket'.format(options.dst_network_card))
+        print(('Using {} for dest socket'.format(options.dst_network_card)))
         sock_dst.setsockopt(socket.SOL_SOCKET, 25, options.dst_network_card)
 
     recv_addr = (options.bind_address, options.port)
     dst_addr = (options.dst_ip, options.dst_port)
-    print("dst_addr={}".format(dst_addr))
-    print("recv_addr={}".format(recv_addr))
+    print(("dst_addr={}".format(dst_addr)))
+    print(("recv_addr={}".format(recv_addr)))
     sock_src.bind(recv_addr)
 
     while True:

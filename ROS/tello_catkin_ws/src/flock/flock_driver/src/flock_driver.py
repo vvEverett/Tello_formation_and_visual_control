@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import threading
 import rospy
@@ -215,43 +215,43 @@ class FlockDriver(object):
 
         # Debugging: is there data here? Print nonzero values
         if data.battery_low:
-            print('battery_low is nonzero: %d' % data.battery_low)
+            print(('battery_low is nonzero: %d' % data.battery_low))
         if data.battery_lower:
-            print('battery_lower is nonzero: %d' % data.battery_lower)
+            print(('battery_lower is nonzero: %d' % data.battery_lower))
         if data.battery_state:
-            print('battery_state is nonzero: %d' % data.battery_state)
+            print(('battery_state is nonzero: %d' % data.battery_state))
         if data.drone_battery_left:
-            print('drone_battery_left is nonzero: %d' % data.drone_battery_left)
+            print(('drone_battery_left is nonzero: %d' % data.drone_battery_left))
         if data.camera_state:
-            print('camera_state is nonzero: %d' % data.camera_state)
+            print(('camera_state is nonzero: %d' % data.camera_state))
         if data.down_visual_state:
-            print('down_visual_state is nonzero: %d' % data.down_visual_state)
+            print(('down_visual_state is nonzero: %d' % data.down_visual_state))
         if data.drone_hover:
-            print('drone_hover is nonzero: %d' % data.drone_hover)
+            print(('drone_hover is nonzero: %d' % data.drone_hover))
         if data.factory_mode:
-            print('factory_mode is nonzero: %d' % data.factory_mode)
+            print(('factory_mode is nonzero: %d' % data.factory_mode))
         if data.front_in:
-            print('front_in is nonzero: %d' % data.front_in)
+            print(('front_in is nonzero: %d' % data.front_in))
         if data.front_lsc:
-            print('front_lsc is nonzero: %d' % data.front_lsc)
+            print(('front_lsc is nonzero: %d' % data.front_lsc))
         if data.front_out:
-            print('front_out is nonzero: %d' % data.front_out)
+            print(('front_out is nonzero: %d' % data.front_out))
         if data.gravity_state:
-            print('gravity_state is nonzero: %d' % data.gravity_state)
+            print(('gravity_state is nonzero: %d' % data.gravity_state))
         if data.imu_calibration_state:
-            print('imu_calibration_state is nonzero: %d' % data.imu_calibration_state)
+            print(('imu_calibration_state is nonzero: %d' % data.imu_calibration_state))
         if data.imu_state:
-            print('imu_state is nonzero: %d' % data.imu_state)
+            print(('imu_state is nonzero: %d' % data.imu_state))
         if data.outage_recording:
-            print('outage_recording is nonzero: %d' % data.outage_recording)
+            print(('outage_recording is nonzero: %d' % data.outage_recording))
         if data.power_state:
-            print('power_state is nonzero: %d' % data.power_state)
+            print(('power_state is nonzero: %d' % data.power_state))
         if data.pressure_state:
-            print('pressure_state is nonzero: %d' % data.pressure_state)
+            print(('pressure_state is nonzero: %d' % data.pressure_state))
         if data.throw_fly_timer:
-            print('throw_fly_timer is nonzero: %d' % data.throw_fly_timer)
+            print(('throw_fly_timer is nonzero: %d' % data.throw_fly_timer))
         if data.wind_state:
-            print('wind_state is nonzero: %d' % data.wind_state)
+            print(('wind_state is nonzero: %d' % data.wind_state))
         if data.temperature_height:
             pass
         	# print('temperature_height is nonzero: %d' % data.temperature_height)
@@ -295,7 +295,7 @@ class FlockDriver(object):
     def exposure_callback(self, msg):
         exposure = msg.data
         if exposure > 3:
-            print ("ERROR: publication of exposure is {} which is > 3".format(exposure))
+            print(("ERROR: publication of exposure is {} which is > 3".format(exposure)))
             return
         self._drone.set_exposure(exposure)
 
@@ -311,7 +311,7 @@ class FlockDriver(object):
         log_level = msg.data
         log_level_options = ['LOG_ERROR', 'LOG_WARN', 'LOG_INFO', 'LOG_DEBUG', 'LOG_ALL']
         if not log_level in log_level_options:
-            print ("ERROR: publication of log_level is {} which is not in {}".format(log_level, log_level_options))
+            print(("ERROR: publication of log_level is {} which is not in {}".format(log_level, log_level_options)))
             return
         self._drone.set_loglevel(log_level)
 
